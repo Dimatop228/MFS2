@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мультимедийный Лендинг</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="click-sound" src="click.mp3"></audio>
+    <audio id="success-sound" src="success.mp3"></audio>
+
+    <header class="header">
+        <div style="text-align: center; class=container">
+            <h1 class="main-title">Добро пожаловать в наш мир возможностей</h1>
+            <p class="nachalo-title">Мы предлагаем уникальные решения для ваших задач.</p>
+            <button class="cta-button" onclick="playClickSound(); scrollToSection('features')">Узнать больше</button>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Что мы предлагаем</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Индивидуальные решения</h3>
+                    <p>Наша команда разрабатывает решения, подходящие именно вам.</p>
+                    <button class="cta-button" onclick="playClickSound(); scrollToSection('contact-form')">Оставить заявку</button>
+                </div>
+                <div class="feature-item">
+                <h3>Постоянная поддержка</h3>
+                    <p>Наша служба поддержки доступна 24/7 для любых вопросов.</p>
+                    <button class="cta-button" onclick="playClickSound(); scrollToSection('map')">Найти нас на карте</button>
+                </div>
+                <div class="feature-item">
+                    <h3>Современные технологии</h3>
+                    <p>Мы используем только передовые инструменты и подходы.</p>
+                    <img src="technology.jpeg" alt="Современные технологии" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interactive" id="map">
+        <div style="text-align: center; class=container">
+            <h2 class="section-title">Наша география</h2>
+            <p>Вы можете найти нас по всей Росии.</p>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acfdad699a71e0d1b0e5d7385b5404cd3d4b15f8cceed2387950689bc69c16e63&amp;source=constructor" width="635" height="367" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <section class="contact-form" id="contact-form">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <form onsubmit="handleSubmit(event)">
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                <input type="text" id="fio" placeholder="Ваше имя" required>
+                <input type="email" id="email" placeholder="Ваш email" required>
+                <textarea id="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+            <p id="form-message" class="form-message"></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Наша компания. Все права защищены.</p>
+            <i class="fi fi-rr-home"></i>
+            <nav>
+                <a href="#features" class="footer-link">Наши услуги</a>
+                <a href="#map" class="footer-link">Карта</a>
+                <a href="#contact-form" class="footer-link">Контакты</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

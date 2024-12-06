@@ -1,0 +1,230 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.main-title {
+    font-size: 3em;
+    color: #ff5733;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffaa00;
+    position: relative;
+}
+.nachalo-title {
+    font-size: 1.6em;
+    text-align: center;
+    color: #ff5733;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #007bff;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Кнопки */
+.cta-button,
+button {
+    background: linear-gradient(90deg, #ff5733, #ff3300);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.cta-button:hover,
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ff3300, #ff5733);
+}
+
+
+/* Ссылки */
+.styled-link {
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.styled-link:hover {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    font-weight: bold;
+}
+
+/* Карточки */
+.feature-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex: 1 1 calc(33% - 20px);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff5733;
+}
+
+.feature-item p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.feature-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Карта */
+.map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #007bff;
+}
+
+/* Форма */
+.contact-form {
+    background: linear-gradient(90deg, #007bff, #6c63ff);
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 2px solid #ff5733;
+}
+
+.contact-form button {
+    margin-top: 10px;
+}
+
+/* Сообщение формы */
+.form-message {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+/* Футер */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer nav {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ff5733;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .feature-list {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        flex: 1 1 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2.2em;
+    }
+
+    .cta-button,
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .contact-form {
+        padding: 20px 10px;
+    }
+
+}
